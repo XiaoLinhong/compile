@@ -36,7 +36,7 @@
 -L/public/software/mathlib/netcdf/4.4.1/gcc/lib -lnetcdff -lnetcdf -L./MPI/util -lparlib  
 ```
 
-可以想象，对于大型程序而言，一个一个的目标文件手动编译，最后在进行链接，将成为一种灾难！ 为了简化这个过程（这就是程序员的思路，一些程序化），引入了一个管理编译过程的工具，[GNU Make](http://www.gnu.org/software/make/)（GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.）。Make的工作内容是通过Makefile去描述的（有自己的语法规则，可以将Make看作一个解释器，makefile就是解释语言的源代码）。一些模式选择将这种方式直接暴露给下游用户（flexpart、CAMx等，直接让用户修改Makefile），这就需要用户自己能够看懂makefile的语言，根据自己的环境（操作系统版本、编译器、编译器版本、编译器选项、库的路径等），做适当的修改，这一般对于新手不太友好。
+可以想象，对于大型程序而言，一个一个的目标文件手动编译，最后再进行链接，将成为一种灾难！ 为了简化这个过程（这就是程序员的思路，一些程序化），引入了一个管理编译过程的工具，[GNU Make](http://www.gnu.org/software/make/)（GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.）。Make的工作内容是通过Makefile去描述的（有自己的语法规则，可以将Make看作一个解释器，makefile就是解释语言的源代码）。一些模式选择将这种方式直接暴露给下游用户（flexpart、CAMx等，直接让用户修改Makefile），这就需要用户自己能够看懂makefile的语言，根据自己的环境（操作系统版本、编译器、编译器版本、编译器选项、库的路径等），做适当的修改，这一般对于新手不太友好。
 
 常见的make命令：
 ```
