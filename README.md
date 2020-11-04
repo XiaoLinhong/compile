@@ -165,6 +165,27 @@ set Mechanism = cb6r3_ae6_aq
 ./bldit_cctm.csh intel
 ```
 
+### GSI
+
+注意gsi不能使用intel2019以上的版本编译
+
+``` bash
+source /public/software/intel/parallel_studio_xe_2018/bin/compilervars.sh intel64
+source /public/software/intel/parallel_studio_xe_2018/impi_latest/intel64/bin/mpivars.sh
+
+export NETCDF_DIR=/public/home/bedrock/envs/v1.0/netcdf/4.7.0
+export CMAKE_C_COMPILER=icc
+export CMAKE_CXX_COMPILER=icpc
+export CMAKE_Fortran_COMPILER=ifort
+
+cd /public/home/tangbx/work/software/GSI
+
+mkdir build; cd build
+cmake ../comGSIv3.7_EnKFv1.3
+
+make -j8
+```
+
 ### 后记
 
 在实践过程，可能会遇到各种各样的错误，不要慌张，机器相关的虽然庞杂（穷其一生，也无法达到全知全能的状态），但是它的逻辑是简单的，是固定的，面对它们，不应该有任何畏难情绪（因为它简单）。
