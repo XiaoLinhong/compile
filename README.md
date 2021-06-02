@@ -122,7 +122,7 @@ DM_FC  = mpiifort
  make COMPILER=ifortomp CONFIG=v6.50 MPI=MVAPICH NCF=NCF4_C IEEE=true
 ```
 
-修改全局参数（网格加大时，需要修改），vim Includes/camx.prm
+修改全局参数（网格较大时，需要修改），vim Includes/camx.prm
 ```
       parameter ( MXCELLS =      700 )
       parameter ( MXPTSRC =   3501400 )
