@@ -117,9 +117,9 @@ DM_FC  = mpiifort
 ### CAMX编译
 ```
  # 修改makefile和MPI/util/Makefile
- # MPI_INST = /public/home/bedrock/envs/v1.0/mvapich/2-1.9
+ # MPI_INST = /public/home/bedrock/envs/v1.0/intel/2019.4/compilers_and_libraries_2019.4.243/linux/mpi/intel64
  # NCF_INST = /public/home/bedrock/envs/v1.0/netcdf/4.7.0
- make COMPILER=ifortomp CONFIG=v6.50 MPI=MVAPICH NCF=NCF4_C IEEE=true
+ make COMPILER=ifortomp CONFIG=v7.00 MPI=MPICH NCF=NCF4_C IEEE=true
 ```
 
 修改全局参数（网格较大时，需要修改），vim Includes/camx.prm
